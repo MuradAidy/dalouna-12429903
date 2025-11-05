@@ -1,0 +1,453 @@
+/* 
+ css/styles.css 
+ Student Name: Murad Aydi
+ Student Id: 12429903
+*/
+
+:root {
+  --bg: #faf7f2;
+  --text: hwb(0 12% 88%);
+  --muted: #6b6b6b;
+  --brand: #216865;
+  --brand-2: #49a078;
+  --card: #ffffff;
+  --border: #e9e3db;
+  --note: #6e6e6e;
+  --tags: #333;
+  --shadows: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
+  padding: 12px 80px;
+}
+.logo {
+  font-weight: bold;
+  color: var(--brand);
+  font-size: 28px;
+}
+nav ul {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav a {
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--brand);
+  transition: color 0.2s;
+}
+.nav a:hover,
+.nav a:focus {
+  color: var(--brand-2);
+}
+.hero {
+  position: relative;
+  background: url('../images/bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: var(--card);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.hero-content {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero .green-box {
+  border-radius: 60px;
+  padding: 8px 18px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--brand-2);
+  color: var(--brand);
+}
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 16px 14px;
+}
+.hero-content p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0px;
+  color: var(--card);
+}
+.button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: var(--brand);
+  color: var(--card);
+  padding: 16px 24px;
+  border-radius: 100px;
+  position: relative;
+  top: 32px;
+}
+.button:hover {
+  background: var(--brand-2);
+}
+.about-section {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 58px 16px;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  width: 50%;
+  box-shadow: 1px 4px 12px var(--shadows);
+}
+.card h3 {
+  font-size: 34px;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.card p {
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.card .chef-note,
+.card .about-note {
+  font-size: 17px;
+  color: var(--note);
+}
+.tags {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tags span {
+  font-size: 14px;
+  color: var(--tags);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+.menu-section {
+  background: var(--bg);
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-section h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+.menu-section .cards-container {
+  gap: 20px;
+}
+.menu-section .card {
+  flex: 1;
+  min-width: 300px;
+  min-height: 360px;
+  text-align: left;
+  padding: 40px 32px;
+}
+.menu-section .card h3 {
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.menu-section .card p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  font-size: 16px;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 16px;
+}
+.menu-section .card p:last-child {
+  border: none;
+}
+.menu-section .price {
+  float: right;
+  color: var(--brand);
+  font-weight: bold;
+}
+.menu-section .details {
+  font-size: 14px;
+  color: var(--note);
+  text-align: left;
+}
+.menu-section .note {
+  font-size: 14px;
+  color: var(--note);
+  text-align: left;
+  position: relative;
+  top: 6px;
+  margin-right: 1050px;
+}
+.hours-section {
+  background: var(--bg);
+  padding: 50px 0 80px;
+  display: flex;
+  justify-content: center;
+}
+.hours-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+.hours-card,
+.reserve-card {
+  flex: 1;
+  padding: 20px 32px 40px;
+  border-radius: 16px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  width: 100%;
+  box-shadow: 1px 4px 12px var(--shadows)
+}
+.hours-card h3,
+.reserve-card h3 {
+  font-size: 30px;
+  color: var(--text);
+  font-weight: bold;
+  margin-top: 0;
+}
+.hours-card p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: var(--text);
+  border-bottom: 1px dashed var(--border);
+  padding: 8px;
+}
+.reserve-card p {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.reserve-card a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--brand);
+}
+.reserve-card .reserved-note {
+  color: var(--note);
+  font-size: 14px;
+  margin-top: 4px;
+}
+.findus-section {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0 80px;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+.findus-card,
+.map-card {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 10px 32px 38px;
+  flex: 1 1 420px;
+  max-width: 520px;
+  box-shadow: 1px 4px 12px var(--shadows);
+}
+.findus-note {
+  color: var(--note);
+  font-size: 14px;
+  margin-top: 4px;
+}
+.map-card {
+  background: url("../images/map.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 220px;
+}
+.site-footer {
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  text-align: center;
+  padding: 26px;
+  color: var(--muted);
+}
+.footer-number,
+.footer-name {
+  color: var(--brand);
+  font-weight: bold;
+}
+.footer-link {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: var(--brand);
+}
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+  }
+  .nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 5px;
+  }
+  .logo {
+    font-size: 32px;
+    margin-right: 24px;
+    position: relative;
+    bottom: 5px;
+  }
+  .tags,
+  .tags span {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .hero-section {
+    height: 100vh;
+    background-position: center;
+  }
+  .hero-content h1 {
+    font-size: 54px;
+  }
+  .hero-content p {
+    font-size: 22px;
+    width: 90%;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    min-height: 320px;
+    width: 80%;
+  }
+  .card p {
+    font-size: 22px;
+  }
+  .card .about-note, .chef-note {
+    font-size: 20px;
+  }
+  .menu-section {
+    padding: 20px 40px;
+  }
+  .menu-section h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-left: 58px;
+  }
+  .menu-section b {
+    font-size: 20px;
+  }
+  .menu-section .card h3 {
+    font-size:  26px;
+  }
+  .menu-section .card p {
+    font-size: 22px;
+  }
+  .price,
+  .menu-section .details {
+    font-size: 20px;
+    text-align: right;
+  }
+  .menu-section .note {
+    font-size: 16px;
+    margin-right: 440px;
+    margin-top: 10px;
+  }
+  .hours-container {
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+  }
+  .hours-container .reserve-card {
+    min-height: 320px;
+  }
+  .reserve-card p, b, a {
+    font-size: 20px;
+  }
+  .reserve-card .reserved-note {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .findus-section .findus-card, .map-card{
+    min-height: 220px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .findus-section .findus-card h2 {
+    font-size: 28px;
+    margin-top: 0px;
+  }
+  .findus-section .findus-card .findus-note {
+    font-size: 18px;
+    position: relative;
+    top: 0px;
+  }
+  .findus-section .findus-card p {
+    font-size: 20px;
+  }
+  .site-footer {
+    padding: 18px 10px;
+  }
+  .site-footer p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    font-size: 64px;
+  }
+  .hero-section {
+    height: 100vh;
+  }
+  .menu-section h2 {
+    font-size: 32px;
+  }
+  .card {
+    width: 60%;
+  }
+}
